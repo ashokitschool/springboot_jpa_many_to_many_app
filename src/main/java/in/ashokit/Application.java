@@ -14,11 +14,11 @@ public class Application {
 
 		UserRoleService bean = context.getBean(UserRoleService.class);
 
-		// bean.saveUserWithRoles();
+		bean.saveUserWithRoles();
 
-		bean.getUser(1);
+		//bean.getUser(1);
 
-		bean.getRole(1);
+		//bean.getRole(1);
 	}
 
 }

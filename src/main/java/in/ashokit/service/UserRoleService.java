@@ -2,10 +2,7 @@ package in.ashokit.service;
 
 import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
-
-import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,9 +29,6 @@ public class UserRoleService {
 		Role r2 = new Role();
 		r2.setRoleName("Admin");
 
-		r1 = roleRepo.save(r1);
-		r2 = roleRepo.save(r2);
-
 		User user = new User();
 		user.setUsername("Ashok");
 		user.setGender("Male");
@@ -48,12 +42,11 @@ public class UserRoleService {
 
 	public void getUser(int id) {
 		Optional<User> findById = userRepo.findById(id);
-		
+
 	}
 
 	public void getRole(int id) {
 		Optional<Role> findById = roleRepo.findById(id);
 
-		
 	}
 }
